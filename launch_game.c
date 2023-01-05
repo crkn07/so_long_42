@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 14:55:40 by crtorres          #+#    #+#             */
-/*   Updated: 2023/01/05 16:29:07 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/01/05 18:10:14 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,25 @@ void	launch_img(t_game *game)
 	mlx_put_image_to_window(game->mlx, game->win, img.img, 100, 100);
 }
 
+/**
+ * It initializes the
+ * directions
+ * 
+ * @param game the game struct
+ */
+void	init_dir(t_game *game)
+{
+	game->coord_dir[NONE] = (t_coord){0, 0};
+	game->coord_dir[NORTH] = (t_coord){0, -1};
+	game->coord_dir[SOUTH] = (t_coord){0, 1};
+	game->coord_dir[WEST] = (t_coord){-1, 0};
+	game->coord_dir[EAST] = (t_coord){1, 0};
+}
+
+
 void	launch_game(t_game *game)
 {
 	launch_window(game);
+	init_dir(game);
 	launch_img(game);
 }

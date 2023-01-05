@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:13:30 by cyacoub-          #+#    #+#             */
-/*   Updated: 2023/01/05 16:11:06 by crtorres         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:13:01 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@
 	return (0);
 } */
 
-
 int	redcross(t_game *game)
 {
 	mlx_destroy_window(game->mlx, game->win);
@@ -47,8 +46,6 @@ int	redcross(t_game *game)
 int	main(void)
 {
 	t_game	game;
-	game.charmander_pos_x = 100;
-	game.charmander_pos_y = 100;
 	
 	launch_game(&game);
 	//mlx_hook(game.win, 4, 1L<<1, keypress, &game);
